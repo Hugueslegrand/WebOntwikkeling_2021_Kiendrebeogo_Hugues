@@ -1,10 +1,10 @@
-enum rainbowColor { red, orange, yellow, green, blue, indigo, violet
+enum Color { red, orange, yellow, green, blue, indigo, violet
 }
 
 let inTeVullenArray : Array<string> =[];
 
-for (let i in rainbowColor){
-    inTeVullenArray[i]=rainbowColor[i];
+for (let i in Color){
+    inTeVullenArray[i]=Color[i];
 }
 console.log(inTeVullenArray);
 
