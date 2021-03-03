@@ -1,20 +1,23 @@
-const multiplyText = (amount: number, text: string)=>{
-let tijdelijkeString: string = " ";
+const multiplyText = (amount: number, text: string, appendix?: string)=>{
+let tijdelijkeString: string = "";
 if (text=="") { 
     
-    text= "default ";
+    text= "default";
     
     for (let index: number = 0; index < amount; index++) {
-        tijdelijkeString += text;
+        tijdelijkeString += text+" ";
         
     }
 }else
     for (let index: number = 0; index < amount; index++) {
-        tijdelijkeString += text;
+        tijdelijkeString += text+" ";
         
     }
-     return tijdelijkeString;
+    if (appendix==null) {
+        return tijdelijkeString;
+    }
+     return tijdelijkeString + appendix;
 }
 
-let result: string = multiplyText(3,"");
-    console.log("result is"+result)
+let result: string = multiplyText(3,"Hugues");
+    console.log("result is \""+result)
