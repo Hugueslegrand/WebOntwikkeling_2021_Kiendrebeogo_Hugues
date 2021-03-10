@@ -1,3 +1,4 @@
+import { Interface } from "node:readline";
 
 /*oefening 2a: Interfaces*/
 interface Movie { 
@@ -57,3 +58,17 @@ const fakeMetaScore =(movies:Movie):number =>{
     return movies.metascore = 34;
 }
 console.log("New metascore = "+fakeMetaScore(myfavoritemovie));
+
+/* Oefening 2c: Functions*/
+
+interface wasMovieMadeInThe90sInterface{
+    (movie:Movie):boolean;
+}
+
+interface averageMetaScoreInterface{
+    (movies:Movie[]):number;
+}
+
+interface fakeMetaScoreInterface{
+    (movies:Movie):number;
+}
