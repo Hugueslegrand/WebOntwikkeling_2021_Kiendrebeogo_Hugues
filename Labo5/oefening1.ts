@@ -4,5 +4,5 @@ const twoDArray = (element1:string, element2:string):string[] => [element1, elem
 
 const numberToString = (number:number):string => `${number}`;
 
-let resultaat: void = printStuff(1,"Hugues");
-    console.log(resultaat)
+printStuff(1,"Hugues");
+
