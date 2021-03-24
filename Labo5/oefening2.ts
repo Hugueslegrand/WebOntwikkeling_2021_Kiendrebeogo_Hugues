@@ -15,6 +15,7 @@ const sum = (getallenInArray:Array<number>,printGroter:PrintToCons,printKleiner:
     }else
     printGroter(som)
 }
+let num = (number:number) => console.log(`the result ${number} is a very small number`)
 
-sum([1,2,3],printToConsole, number => console.log(`the result ${number} is a very small number`))
+sum([1,2,3,5],printToConsole, num)
  
