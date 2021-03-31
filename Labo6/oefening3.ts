@@ -46,9 +46,9 @@ let sumOfAllXp = starters.reduce(
 console.log(sumOfAllXp);
 
 
-let strongestPokemon = starters.reduce(
-    (maximum,e) => 
-    maximum = maximum > e.xp ? maximum : e.xp ,0);
+let strongestPokemon:Pokemon = starters.reduce((currentStrongestPokemon: Pokemon, currentPokemon:Pokemon) =>
+(currentPokemon>= currentStrongestPokemon)? currentPokemon:currentStrongestPokemon);
+
 console.log(strongestPokemon);
 
 //Combineren (Reduce + Filter )
