@@ -64,5 +64,5 @@ console.log(sumOfAllXpOfWeakPokemon);
 
 //Sorteren
 
-let sortedStarters = starters.sort((a,b)=> (a.xp>b.xp)?1:-1);
+let sortedStarters = starters.sort((a:Pokemon,b:Pokemon)=> (a.xp>b.xp)?1:-1);
 console.log(sortedStarters)
