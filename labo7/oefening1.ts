@@ -24,3 +24,7 @@ const slowDiv = (a: number, b: number) => {
 slowSum(1,5).then((result) => { console.log("1 + 5 = "+result)}
 );
 
+slowSum(1,5).then((result) => { 
+    slowMult(result,2).then((result) => { console.log("(1 + 5) * 2 = "+result)});
+    }
+);
