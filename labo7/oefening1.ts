@@ -31,10 +31,11 @@ slowDiv(0,4).then((result) => { console.log(result); });
 slowSum(1,5).then((result) => { console.log("1 + 5 = "+result);}
 );
 
-slowDiv(6,3)
+slowDiv(6,3);
 
 slowSum(1,5).then((result) => { 
     slowMult(result,2).then((result) => { console.log("(1 + 5) * 2 = "+result);});
     }
 );
 
+slowDiv(6,0).then((result) => { console.log(result); });
