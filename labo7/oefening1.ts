@@ -26,16 +26,16 @@ const slowDiv = (a: number, b: number) => {
     });
 }
 
-slowDiv(0,4).then((result) => { console.log(result); });
+slowDiv(0,4).then((result:number) => { console.log(result); });
 
-slowSum(1,5).then((result) => { console.log("1 + 5 = "+result);}
+slowSum(1,5).then((result:number) => { console.log("1 + 5 = "+result);}
 );
 
 slowDiv(6,3);
 
-slowSum(1,5).then((result) => { 
+slowSum(1,5).then((result:number) => { 
     slowMult(result,2).then((result) => { console.log("(1 + 5) * 2 = "+result);});
     }
 );
 
-slowDiv(6,0).then((result) => { console.log(result); });
+slowDiv(6,0).then((result:number) => { console.log(result); });
