@@ -6,6 +6,8 @@ Promise.all([promise1,promise2,promise3]).then(
 (coctail) => {
 console.log(coctail[0].drinks[0].strDrink, coctail[1].drinks[0].strDrink, coctail[2].drinks[0].strDrink );
 }
-);
+).catch((error) =>{
+    console.log(error);
+});
 
 
