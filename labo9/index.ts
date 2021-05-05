@@ -1,14 +1,18 @@
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
+app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 app.set('port', 3000);
 
-app.get('/',(req:any,res:any)=>{
+/* app.get('/',(req:any,res:any)=>{
     res.type('text/html');
     res.send('Hello World');
-});
+}); */
+app.get('/', (req: any, res: any) => {
 
+    res.render('landingPage');
+});
 app.listen(app.get('port'),
     () => console.log('[server] http://localhost:' + app.get('port')));
