@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const ejs = require('ejs');
 app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded());
 
 app.set('view engine', 'ejs');
 app.set('port', 3000);
@@ -34,8 +36,12 @@ app.get('/addmovie',(req:any,res:any)=>{
     res.render('addMovie');
 })
 app.post('/addmovie',(req:any,res:any)=>{
-    let data = req.body;
-    res.json(data);
+    for (let index = 0; index < movies.length; index++) {
+     if (index = movies.length){
+        movies[index]= req.body;
+        console.log(movies)
+     }   
+    }
 })
 app.listen(app.get('port'),
     () => console.log('[server] http://localhost:' + app.get('port')));
