@@ -22,13 +22,20 @@ app.get('/', (req: any, res: any) => {
 });
 app.get('/movies', (req: any, res: any) => {
     
-    res.render('movies');
+    res.render('movies',{movies});
 });
 app.get('/movies/:index',(req:any,res:any)=>{
     let index = req.params.index;
    
     res.render('movie',movies[index]);
 })
+app.get('/addmovie',(req:any,res:any)=>{
 
+    res.render('addMovie');
+})
+app.post('/addmovie',(req:any,res:any)=>{
+    let data = req.body;
+    res.json(data);
+})
 app.listen(app.get('port'),
     () => console.log('[server] http://localhost:' + app.get('port')));
