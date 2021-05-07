@@ -7,9 +7,10 @@ const dadJokes = async () => {
             }
         });
         let jokesJson = await jokes.json();
-           for (let index = 0; index < jokesJson.results.length; index++) {
+        console.log(jokesJson);
+           /* for (let index = 0; index < jokesJson.results.length; index++) {
             console.log(jokesJson.results[index].joke)    
-            }
+            } */
  }
 };
 dadJokes();
