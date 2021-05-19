@@ -48,9 +48,9 @@ const callDB = async () => {
         await client.close();
     }
 }
-callDB();
-app.get('/', (req: any, res: any) => {
 
+app.get('/', (req: any, res: any) => {
+    callDB();
     res.render('landingPage');
 });
 app.get('/movies', (req: any, res: any) => {
