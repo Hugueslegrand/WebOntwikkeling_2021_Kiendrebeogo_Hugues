@@ -1,0 +1,22 @@
+<%- include('header'); %>
+
+
+<a href="/">terug naar landing page</a>
+<ul>
+    <%
+    for (let i = 0; i < movies.length; i++) {
+        %>
+        <li>
+            <h1>
+                <%- '<strong>' + movies[i].name + '</strong><br/>' %>
+            </h1>
+            <p>
+                Metascore van <%- movies[i].myScore %>
+            </p>
+            <button> <a href="/movies/<%= i %>">Lees meer</a> </button>
+            
+        </li>
+        <% 
+    } 
+    %>
+</ul>
