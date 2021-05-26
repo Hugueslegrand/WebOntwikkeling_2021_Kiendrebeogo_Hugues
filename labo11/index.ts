@@ -68,7 +68,7 @@ app.get('/removemovie/:index', (req: any, res: any) => {
 
     client.db('WebOntwikkeling').collection('Movies').deleteOne(
     {_id: movies[index]._id})
-    
+
     movies.splice(index,1);
 
     res.render('landingPage');
@@ -80,8 +80,8 @@ app.get('/addmovie', (req: any, res: any) => {
 })
 
 app.post('/addmovie', (req: any, res: any) => {
-    
-    movies.push({ name: req.body.name, myScore: req.body.myScore, timesViewed: 0 });
+    let randomTimesViewed = Math.round(Math.random() * (100) + 1);
+    movies.push({ name: req.body.name, myScore: req.body.myScore, timesViewed: randomTimesViewed});
     for (let index = 0; index < movies.length; index++) {
     client.db('WebOntwikkeling').collection('Movies').updateOne({ name: movies[index].name }
             ,
